@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MnpOnboardingNextView" customModule="Kcell" customModuleProvider="target">
+            <connections>
+                <outlet property="nextButton" destination="iAt-5d-E3V" id="T2e-XA-wKz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAt-5d-E3V" customClass="PrimaryButton" customModule="Kcell" customModuleProvider="target">
+                    <rect key="frame" x="24" y="58" width="366" height="160"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="didTapNextButton" destination="-1" eventType="touchUpInside" id="TbS-aI-361"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="iAt-5d-E3V" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="9E8-hM-yd4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="iAt-5d-E3V" secondAttribute="bottom" constant="14" id="BOU-ol-nov"/>
+                <constraint firstItem="iAt-5d-E3V" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="14" id="E5x-7r-6VS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iAt-5d-E3V" secondAttribute="trailing" constant="24" id="tvU-UT-FPP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="68.115942028985515" y="298.66071428571428"/>
+        </view>
+    </objects>
+</document>

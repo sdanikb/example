@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MnpSignViewController" customModule="Kcell" customModuleProvider="target">
+            <connections>
+                <outlet property="agreementsTextView" destination="j3U-AP-b7x" id="6vp-BW-6T5"/>
+                <outlet property="clearButton" destination="6SO-kS-Eb3" id="nHW-C4-cBA"/>
+                <outlet property="continueButton" destination="KL1-1g-zbS" id="YDd-Mi-I0f"/>
+                <outlet property="messageLabel" destination="kft-fu-xkc" id="GUm-Ze-Hoj"/>
+                <outlet property="signView" destination="DWE-7p-VYD" id="dp0-Wh-0Sd"/>
+                <outlet property="titleLabel" destination="myO-fI-LjB" id="zx8-aW-Fmk"/>
+                <outlet property="view" destination="iN0-l3-epB" id="JZa-pq-rV9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T86-rY-tGW">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4St-6d-BqU">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="494.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Tb-3P-4OR">
+                                    <rect key="frame" x="24" y="24" width="366" height="49.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myO-fI-LjB">
+                                            <rect key="frame" x="0.0" y="0.0" width="366" height="24.5"/>
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kft-fu-xkc">
+                                            <rect key="frame" x="0.0" y="32.5" width="366" height="17"/>
+                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWE-7p-VYD" customClass="MnpSignatureView" customModule="Kcell" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="97.5" width="414" height="265"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SO-kS-Eb3">
+                                            <rect key="frame" x="358" y="209" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="5DV-vY-nHq"/>
+                                                <constraint firstAttribute="height" constant="40" id="jhp-Vm-XDO"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="store-delete"/>
+                                            <connections>
+                                                <action selector="clearButtonDidTap:" destination="-1" eventType="touchUpInside" id="7JI-Vc-5Pp"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="6SO-kS-Eb3" secondAttribute="trailing" constant="16" id="JRY-0a-xYE"/>
+                                        <constraint firstAttribute="width" secondItem="DWE-7p-VYD" secondAttribute="height" multiplier="375:240" id="Tf0-wh-0h8"/>
+                                        <constraint firstAttribute="bottom" secondItem="6SO-kS-Eb3" secondAttribute="bottom" constant="16" id="gOP-tG-wjj"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KL1-1g-zbS" customClass="PrimaryButton" customModule="Kcell" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="386.5" width="366" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="05B-jN-aOl"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="continueButtonDidTap:" destination="-1" eventType="touchUpInside" id="cZ3-dF-TOH"/>
+                                    </connections>
+                                </button>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="382" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="j3U-AP-b7x" customClass="LinkTextView" customModule="Kcell" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="454.5" width="382" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="textColor" systemColor="labelColor"/>
+                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="KL1-1g-zbS" secondAttribute="trailing" constant="24" id="16c-Kc-cGy"/>
+                                <constraint firstItem="DWE-7p-VYD" firstAttribute="leading" secondItem="4St-6d-BqU" secondAttribute="leading" id="3bE-RE-3Wc"/>
+                                <constraint firstAttribute="bottom" secondItem="j3U-AP-b7x" secondAttribute="bottom" id="42C-tI-yAx"/>
+                                <constraint firstAttribute="trailing" secondItem="j3U-AP-b7x" secondAttribute="trailing" constant="16" id="4XI-5j-izk"/>
+                                <constraint firstItem="KL1-1g-zbS" firstAttribute="top" secondItem="DWE-7p-VYD" secondAttribute="bottom" constant="24" id="9vQ-ki-dku"/>
+                                <constraint firstItem="4Tb-3P-4OR" firstAttribute="leading" secondItem="4St-6d-BqU" secondAttribute="leading" constant="24" id="EHR-Ds-Myk"/>
+                                <constraint firstItem="4Tb-3P-4OR" firstAttribute="top" secondItem="4St-6d-BqU" secondAttribute="top" constant="24" id="LwS-cf-gr8"/>
+                                <constraint firstItem="KL1-1g-zbS" firstAttribute="leading" secondItem="4St-6d-BqU" secondAttribute="leading" constant="24" id="WiI-w1-Huc"/>
+                                <constraint firstItem="DWE-7p-VYD" firstAttribute="top" secondItem="4Tb-3P-4OR" secondAttribute="bottom" constant="24" id="Z2x-Ah-W0Z"/>
+                                <constraint firstAttribute="trailing" secondItem="4Tb-3P-4OR" secondAttribute="trailing" constant="24" id="fkM-sh-YmW"/>
+                                <constraint firstItem="j3U-AP-b7x" firstAttribute="top" secondItem="KL1-1g-zbS" secondAttribute="bottom" constant="24" id="gaX-Qr-SCD"/>
+                                <constraint firstAttribute="trailing" secondItem="DWE-7p-VYD" secondAttribute="trailing" id="kBl-H1-Pb9"/>
+                                <constraint firstItem="j3U-AP-b7x" firstAttribute="leading" secondItem="4St-6d-BqU" secondAttribute="leading" constant="16" id="nA8-HG-Tpi"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="4St-6d-BqU" secondAttribute="bottom" id="34V-Kt-F7t"/>
+                        <constraint firstItem="4St-6d-BqU" firstAttribute="width" secondItem="T86-rY-tGW" secondAttribute="width" id="dNt-5g-iDo"/>
+                        <constraint firstAttribute="trailing" secondItem="4St-6d-BqU" secondAttribute="trailing" id="h4y-KC-7EY"/>
+                        <constraint firstItem="4St-6d-BqU" firstAttribute="top" secondItem="T86-rY-tGW" secondAttribute="top" id="nNv-jX-jjq"/>
+                        <constraint firstItem="4St-6d-BqU" firstAttribute="leading" secondItem="T86-rY-tGW" secondAttribute="leading" id="utg-oI-tzk"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="T86-rY-tGW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="7pK-6e-MZS"/>
+                <constraint firstAttribute="trailing" secondItem="T86-rY-tGW" secondAttribute="trailing" id="QaP-hw-wt5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="T86-rY-tGW" secondAttribute="bottom" id="dGz-qt-dsx"/>
+                <constraint firstItem="T86-rY-tGW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sKb-d3-sZa"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="136.23188405797103" y="152.00892857142856"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="j3U-AP-b7x">
+            <size key="intrinsicContentSize" width="382" height="40"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="store-delete" width="24" height="24"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
